@@ -1,0 +1,71 @@
+﻿<Page x:Class="ПРИЛОЖЕНИЕ_ХАКАТОН.Pages.Account"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ПРИЛОЖЕНИЕ_ХАКАТОН.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1000"
+      Title="Account">
+
+    <Grid Background="#EFEFEF">
+
+        <!-- Основной блок профиля пользователя -->
+        <Border Background="White" Width="800" Height="400" CornerRadius="10"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Padding="20" BorderBrush="#CCCCCC" BorderThickness="1">
+            <!-- Серая рамка -->
+
+            <Grid>
+                <!-- Левая сторона (аватар и кнопка выхода) -->
+                <StackPanel Width="180" HorizontalAlignment="Left" Margin="0,0,20,0">
+                    <!-- Аватар -->
+                    <Border Width="160" Height="160" Background="#DDDDDD" CornerRadius="80"
+                            VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <!-- Заменить на Image при наличии картинки аватара -->
+                        <Image Source="\img\accountIcon.jpg" Width="160"/>
+                    </Border>
+
+                    <!-- Кнопка выхода -->
+                    <Button x:Name="accountPage_btn_exit" Click="accountPage_btn_exit_Click" Content="Выйти" Background="#E76F00" Foreground="White" FontSize="16" 
+                            Width="120" Height="40" HorizontalAlignment="Center"
+                            Margin="0,20,0,0" BorderThickness="0" BorderBrush="Transparent"
+                            Cursor="Hand"/>
+                </StackPanel>
+
+                <!-- Правая сторона (информация о пользователе) -->
+                <StackPanel HorizontalAlignment="Center">
+                    <!-- Имя пользователя -->
+                    <TextBlock Text="Имя Фамилия" FontSize="24" FontWeight="Bold" Foreground="#333333" />
+
+                    <!-- Статус пользователя -->
+                    <TextBlock Text="Статус: Онлайн" FontSize="16" Foreground="Green" Margin="0,5,0,15"/>
+
+                    <!-- Дата регистрации -->
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                        <TextBlock Text="Дата регистрации:" FontSize="16" FontWeight="Bold" />
+                        <TextBlock Text=" 16 января 2024" FontSize="16" Foreground="#555555" />
+                    </StackPanel>
+
+                    <!-- Количество сообщений -->
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                        <TextBlock Text="Прогресс по курсам:" FontSize="16" FontWeight="Bold" />
+                        <TextBlock Text=" 99.9%" FontSize="16" Foreground="#555555" />
+                    </StackPanel>
+
+                    <!-- Рейтинг пользователя -->
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                        <TextBlock Text="Специальность:" FontSize="16" FontWeight="Bold" />
+                        <TextBlock Text=" Какая-нибудь" FontSize="16" Foreground="#555555" />
+                    </StackPanel>
+
+                    <!-- Ранг пользователя -->
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                        <TextBlock Text="Ранг:" FontSize="16" FontWeight="Bold" />
+                        <TextBlock Text=" Опытный участник" FontSize="16" Foreground="#555555" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
